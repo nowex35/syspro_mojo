@@ -29,7 +29,7 @@ struct StatusCode:
 
 @value
 struct HTTPResponse(Writable, Stringable):
-    var headers: headers
+    var headers: Headers
     var cookies: ResponseCookieJar
     var body_raw: Bytes
 

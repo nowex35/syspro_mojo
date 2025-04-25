@@ -71,6 +71,8 @@ struct Client:
                 host_port = req.uri.host.split(":")
             except:
                 raise Error("Client.do: Failed to split host and port.")
+            host_str = host_port[0]
+            port = atol(host_port[1])
         else:
             host_str = req.uri.host
             if is_tls:
@@ -81,10 +83,10 @@ struct Client:
         var cached_connection = False
         var conn: TCPConnection
         try:
-            conn = self._connections.get()
+            conn = self._connections.take(host_str)
             cached_connection = True
         except e:
-            if str(e) == "PoolManager.take: key not found.":
+            if str(e) == "PoolManager.take: Key not found.":
                 conn = create_connection(host_str, port)
             else:
                 logger.error(e)

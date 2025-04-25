@@ -1,7 +1,6 @@
 [project]
 authors = ["nowex35 <a.hayate0726@gmail.com>"]
 channels = ["https://conda.modular.com/max-nightly", "https://conda.modular.com/max", "https://repo.prefix.dev/modular-community", "conda-forge"]
-description = "Add a short description here"
 name = "syspro_mojo"
 platforms = ["linux-64"]
 version = "0.1.0"
@@ -9,5 +8,4 @@ version = "0.1.0"
 [tasks]
 
 [dependencies]
-max = ">=24.6.0,<25"
-small_time = ">=0.1.6,<0.2"
+small_time = "==0.0.1"

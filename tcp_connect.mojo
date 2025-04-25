@@ -26,7 +26,7 @@ from syspro_mojo.libc import (
     gai_strerror,
 )
 
-"====================================================================================================="
+from syspro_mojo import *
 
 fn test_request(mut client: Client) raises -> None:
     var uri = URI.parse("google.com")
@@ -53,30 +53,3 @@ fn main() -> None:
         test_request(client)
     except e:
         print(e)
-
-
-"""
-Clientコース
-getaddrinfo->
-get_ip_address->
-struct Socket->
-connect->
-create_connection->
-struct Client->
-struct HTTPRequest->
-struct URI->
-struct Headers->
-fn to_string from strings.mojo
-lightbug_http/client.mojo->
-tcp_connect.mojo             #HTTPクライアントを作成してリクエストを送信
-
-
--
-Serverコース
-
-net.listen
-server.set_address
-server.serve
-↓
-server.listen_and_serve
-"""

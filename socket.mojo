@@ -380,14 +380,15 @@ struct Socket[AddrType: Addr, address_family: Int = AF_INET](Representable,Strin
     fn _receive(self, mut buffer: Bytes) raises -> UInt:
         # receive data from socket into the buffer
         # return the buffer with the recieved data, and an error if one occurred.
+        var bytes_received: Int
         try: 
-            var bytes_received = recv(
+            bytes_received = recv(
                 self.fd,
                 buffer.unsafe_ptr().offset(buffer.size),
                 buffer.capacity - buffer.size,
                 0,
             )
-            buffer.size += bytes_recieved
+            buffer.size += bytes_received
         except e:
             logger.error(e)
             raise Error("Socket.receive: Failed to read data from connection.")

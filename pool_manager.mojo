@@ -42,6 +42,7 @@ struct PoolManager[ConnectionType: Connection]():
         var index: Int
         try:
             index = self.mapping[host]
+            print("index:", index)
             _ = self.mapping.pop(host)
         except:
             raise Error("PoolManager.take: Key not found.")
