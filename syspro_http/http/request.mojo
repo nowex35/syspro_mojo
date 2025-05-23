@@ -1,11 +1,11 @@
 from memory import Span
-from syspro_mojo.io.bytes import Bytes, bytes, Byte
-from syspro_mojo.header import Headers, HeaderKey, Header, write_header
-from syspro_mojo.uri import URI
-from syspro_mojo.myutils import ByteReader, ByteWriter, logger
-from syspro_mojo.io.sync import Duration
-from syspro_mojo.cookie import RequestCookieJar
-from syspro_mojo.strings import (
+from syspro_http.io.bytes import Bytes, bytes, Byte
+from syspro_http.header import Headers, HeaderKey, Header, write_header
+from syspro_http.uri import URI
+from syspro_http.myutils import ByteReader, ByteWriter, logger
+from syspro_http.io.sync import Duration
+from syspro_http.cookie import RequestCookieJar
+from syspro_http.strings import (
     strHttp11,
     strHttp,
     strSlash,

@@ -1,5 +1,5 @@
 from collections import Optional
-from syspro_mojo.header import HeaderKey
+from syspro_http.header import HeaderKey
 
 struct Cookie(CollectionElement):
     alias EXPIRES = "Expires"

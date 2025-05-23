@@ -1,6 +1,6 @@
 from collections import Dict
 from memory import UnsafePointer
-from syspro_mojo.libc import (
+from syspro_http.libc import (
     c_int,
     AF_INET,
     SOCK_STREAM,
@@ -11,14 +11,14 @@ from syspro_mojo.libc import (
     close,
 )
 
-from syspro_mojo.strings import to_string
-from syspro_mojo.net import default_buffer_size
-from syspro_mojo.http import HTTPRequest, HTTPResponse, encode
-from syspro_mojo.header import Headers, HeaderKey
-from syspro_mojo.net import create_connection, TCPConnection
-from syspro_mojo.io.bytes import Bytes
-from syspro_mojo.myutils import ByteReader, logger
-from syspro_mojo.pool_manager import PoolManager
+from syspro_http.strings import to_string
+from syspro_http.net import default_buffer_size
+from syspro_http.http import HTTPRequest, HTTPResponse, encode
+from syspro_http.header import Headers, HeaderKey
+from syspro_http.net import create_connection, TCPConnection
+from syspro_http.io.bytes import Bytes
+from syspro_http.myutils import ByteReader, logger
+from syspro_http.pool_manager import PoolManager
 
 struct Client:
     var host: String

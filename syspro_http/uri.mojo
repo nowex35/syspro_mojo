@@ -1,6 +1,6 @@
 from utils import Variant
-from syspro_mojo.io.bytes import Bytes, bytes
-from syspro_mojo.strings import (
+from syspro_http.io.bytes import Bytes, bytes
+from syspro_http.strings import (
     strSlash,
     strHttp11,
     strHttp10,

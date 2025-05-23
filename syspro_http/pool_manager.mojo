@@ -4,9 +4,9 @@ from builtin.value import StringableCollectionElement
 from memory import UnsafePointer, bitcast, memcpy
 from collections import Dict, Optional
 from collections.dict import RepresentableKeyElement
-from syspro_mojo.net import create_connection, TCPConnection, Connection
-from syspro_mojo.myutils import logger
-from syspro_mojo.owning_list import OwningList
+from syspro_http.net import create_connection, TCPConnection, Connection
+from syspro_http.myutils import logger
+from syspro_http.owning_list import OwningList
 
 
 struct PoolManager[ConnectionType: Connection]():

@@ -1,9 +1,9 @@
 from collections import Optional, List, Dict
 from small_time import SmallTime, TimeZone
 from small_time.small_time import strptime
-from syspro_mojo.strings import to_string, lineBreak
-from syspro_mojo.header import HeaderKey, write_header
-from syspro_mojo.myutils import ByteReader, ByteWriter, is_newline, is_space
+from syspro_http.strings import to_string, lineBreak
+from syspro_http.header import HeaderKey, write_header
+from syspro_http.myutils import ByteReader, ByteWriter, is_newline, is_space
 
 
 @value

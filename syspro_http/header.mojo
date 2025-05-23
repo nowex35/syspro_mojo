@@ -1,9 +1,9 @@
 from collections import Dict, Optional
 from memory import Span
-from syspro_mojo.io.bytes import Bytes, Byte
-from syspro_mojo.strings import BytesConstant
-from syspro_mojo.myutils import ByteReader, ByteWriter, is_newline, is_space, logger
-from syspro_mojo.strings import rChar, nChar, lineBreak, to_string
+from syspro_http.io.bytes import Bytes, Byte
+from syspro_http.strings import BytesConstant
+from syspro_http.myutils import ByteReader, ByteWriter, is_newline, is_space, logger
+from syspro_http.strings import rChar, nChar, lineBreak, to_string
 
 
 struct HeaderKey:

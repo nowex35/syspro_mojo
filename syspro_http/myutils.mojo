@@ -1,9 +1,9 @@
 from sys.param_env import env_get_string
 from memory import Span
 from sys.param_env import env_get_string
-from syspro_mojo.io.bytes import Bytes, Byte
-from syspro_mojo.strings import BytesConstant
-from syspro_mojo.net import default_buffer_size
+from syspro_http.io.bytes import Bytes, Byte
+from syspro_http.strings import BytesConstant
+from syspro_http.net import default_buffer_size
 from sys.ffi import external_call
 alias c_ushort = UInt16
 

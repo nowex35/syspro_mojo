@@ -1,6 +1,6 @@
 from utils import StringSlice
 from memory import Span
-from syspro_mojo.io.bytes import Bytes, bytes, byte
+from syspro_http.io.bytes import Bytes, bytes, byte
 
 alias strSlash = "/"
 alias strHttp = "http"

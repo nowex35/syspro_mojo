@@ -1,16 +1,16 @@
 from memory import UnsafePointer, Span
 from utils import StaticTuple
 from sys.ffi import external_call, OpaquePointer
-from syspro_mojo.myutils import Logger, logger, LogLevel, htons
-from syspro_mojo.strings import String, to_string, NetworkType
-from syspro_mojo.io.bytes import Bytes
-from syspro_mojo.uri import URI
-from syspro_mojo.http.request import HTTPRequest
-from syspro_mojo.header import Headers, Header
-from syspro_mojo.socket import Socket
-from syspro_mojo.client import Client
-from syspro_mojo.net import AnAddrInfo, getaddrinfo, freeaddrinfo, join_host_port, TCPAddr, TCPConnection, create_connection
-from syspro_mojo.libc import (
+from syspro_http.myutils import Logger, logger, LogLevel, htons
+from syspro_http.strings import String, to_string, NetworkType
+from syspro_http.io.bytes import Bytes
+from syspro_http.uri import URI
+from syspro_http.http.request import HTTPRequest
+from syspro_http.header import Headers, Header
+from syspro_http.socket import Socket
+from syspro_http.client import Client
+from syspro_http.net import AnAddrInfo, getaddrinfo, freeaddrinfo, join_host_port, TCPAddr, TCPConnection, create_connection
+from syspro_http.libc import (
     c_char,
     c_int,
     c_ushort,
@@ -26,7 +26,7 @@ from syspro_mojo.libc import (
     gai_strerror,
 )
 
-from syspro_mojo import *
+from syspro_http import *
 
 fn test_request(mut client: Client) raises -> None:
     var uri = URI.parse("google.com")

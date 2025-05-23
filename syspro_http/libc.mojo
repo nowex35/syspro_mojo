@@ -2,7 +2,7 @@ from utils import StaticTuple
 from sys.ffi import external_call
 from sys.info import sizeof, os_is_windows, os_is_macos, os_is_linux
 from memory import memcpy, UnsafePointer, stack_allocation
-from syspro_mojo.io.bytes import Bytes
+from syspro_http.io.bytes import Bytes
 
 alias IPPROTO_IPV6 = 41
 alias IPV6_V6ONLY = 26

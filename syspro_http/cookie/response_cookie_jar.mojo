@@ -1,7 +1,7 @@
 from collections import Optional, List, Dict, KeyElement
-from syspro_mojo.strings import to_string
-from syspro_mojo.header import HeaderKey, write_header
-from syspro_mojo.myutils import ByteWriter
+from syspro_http.strings import to_string
+from syspro_http.header import HeaderKey, write_header
+from syspro_http.myutils import ByteWriter
 
 
 @value

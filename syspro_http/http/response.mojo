@@ -1,8 +1,8 @@
 from small_time.small_time import now
-from syspro_mojo.uri import URI
-from syspro_mojo.myutils import ByteReader, ByteWriter
-from syspro_mojo.io.bytes import Bytes, bytes, Byte, byte
-from syspro_mojo.strings import (
+from syspro_http.uri import URI
+from syspro_http.myutils import ByteReader, ByteWriter
+from syspro_http.io.bytes import Bytes, bytes, Byte, byte
+from syspro_http.strings import (
     strHttp11,
     strHttp,
     strSlash,
@@ -14,7 +14,7 @@ from syspro_mojo.strings import (
 )
 from collections import Optional
 from utils import StringSlice
-from syspro_mojo.net import TCPConnection, default_buffer_size
+from syspro_http.net import TCPConnection, default_buffer_size
 
 
 struct StatusCode:

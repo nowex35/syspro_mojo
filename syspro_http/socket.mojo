@@ -3,8 +3,8 @@ from utils import StaticTuple
 from sys import sizeof, external_call
 from sys.info import os_is_macos
 from memory import Pointer, UnsafePointer
-from syspro_mojo.net import Addr
-from syspro_mojo.libc import (
+from syspro_http.net import Addr
+from syspro_http.libc import (
     socket,
     connect,
     recv,
@@ -45,10 +45,10 @@ from syspro_mojo.libc import (
     CloseInvalidDescriptorError,
     ShutdownInvalidArgumentError,
 )
-from syspro_mojo.io.bytes import Bytes
-from syspro_mojo.strings import NetworkType
-from syspro_mojo.myutils import logger
-from syspro_mojo.net import (
+from syspro_http.io.bytes import Bytes
+from syspro_http.strings import NetworkType
+from syspro_http.myutils import logger
+from syspro_http.net import (
     Addr,
     default_buffer_size,
     binary_port_to_int,

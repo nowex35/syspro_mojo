@@ -3,10 +3,10 @@ from time import sleep, perf_counter_ns
 from memory import UnsafePointer, stack_allocation, Span
 from sys.info import sizeof, os_is_macos
 from sys.ffi import external_call, OpaquePointer
-from syspro_mojo.strings import NetworkType, to_string
-from syspro_mojo.io.bytes import Bytes, bytes
-from syspro_mojo.io.sync import Duration
-from syspro_mojo.libc import (
+from syspro_http.strings import NetworkType, to_string
+from syspro_http.io.bytes import Bytes, bytes
+from syspro_http.io.sync import Duration
+from syspro_http.libc import (
     c_void,
     c_int,
     c_uint,
@@ -46,8 +46,8 @@ from syspro_mojo.libc import (
     INET_ADDRSTRLEN,
     INET6_ADDRSTRLEN,
 )
-from syspro_mojo.myutils import logger
-from syspro_mojo.socket import Socket
+from syspro_http.myutils import logger
+from syspro_http.socket import Socket
 
 
 alias default_buffer_size = 4096
